@@ -1,0 +1,6 @@
+{
+    "baseUrl" : "https://automationteststore.com/",
+    "evn" : {
+        "name" : "Testing"
+    }
+}
