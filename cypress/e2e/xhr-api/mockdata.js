@@ -1,6 +1,6 @@
 /// <reference types ='Cypress'/>
 
-describe('Basic Login Tests - positive test', ()=>{
+describe('Basic Login Test', ()=>{
 
     beforeEach(function(){
         cy.intercept('POST', '**/login', {fixture : 'mockingLoginResponse.json'}).as('successLogin')
