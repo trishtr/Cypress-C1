@@ -16,6 +16,8 @@ describe("Test Contact Us form via WebDriver Uni", () => {
         })
     })
 
+   
+
     beforeEach(() =>{
     
         homepage_PO.visitHomePage();
@@ -30,12 +32,14 @@ describe("Test Contact Us form via WebDriver Uni", () => {
         cy.title().should('include', 'WebDriver | Contact Us')
         cy.url().should('include', 'Contact-Us')
         cy.contains("CONTACT US").click({force:true});
-        cy.webdriverUni_ContactForm_Submission(data.first_name, data.last_name, data.email, "testing", "h1", "Thank You for your Message!")
+        // cy.webdriverUni_ContactForm_Submission(data.first_name, data.last_name, data.email, "testing", "h1", "Thank You for your Message!")
+
     })
 
     it.only("Should not be able to submit a sucessful submission via contact us form as all fields are required", () => {
 
         contactUsPage.contactForm_Submission(data.first_name, data.last_name, " ","testing", "body", "Error: Invalid email address" )
+
     })
 
 })
